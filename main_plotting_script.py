@@ -58,6 +58,12 @@ def load_data_from_sd (filename):
 
 def gen_chart(df):
 
+    #fig, ax = plt.subplots()
+
+    fig = plt.figure()
+
+    ax = fig.add_axes([0.12, 0.12, 0.77, 0.63])
+
     for column in df.columns.values.tolist():
 
         if column != 'time':
@@ -66,15 +72,19 @@ def gen_chart(df):
 
             y = df['time'].values
 
-            plt.plot(y, x, label = column)
+            ax.plot(y, x, label = column)
 
             print(x, y)
 
-    plt.title('Log from cansat')
-    plt.xlabel('time')
-    plt.ylabel('values')
+    ax.set(xlabel = 'time')
+    ax.set(ylabel = 'values')
 
-    plt.legend()
+    
+    ax.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc='lower left', ncol = 2, mode = 'expand', borderaxespad=0.)
+
+    # Update the plot
+    plt.show()
+
     plt.savefig('test.png')
 
 

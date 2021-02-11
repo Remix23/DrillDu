@@ -28,7 +28,7 @@ RSSI = -123
 Temperature cansat = 24.45 deg C
 Presure cansat = 999.3 hPa
 Temperature ground = 12.56 deg C
-Presure ground = 1000.6 hPa
+Presure ground = 100.6 hPa
 Altitude = 40 m
 14
 Package #1
@@ -36,5 +36,5 @@ RSSI = -123
 Temperature cansat = 24.45 deg C
 Presure cansat = 999.3 hPa
 Temperature ground = 12.56 deg C
-Presure ground = 1000.6 hPa
+Presure ground = 100.6 hPa
 Altitude = 0 m
