@@ -56,37 +56,51 @@ def load_data_from_sd (filename):
 
     return data
 
-def gen_chart(df):
-
-    #fig, ax = plt.subplots()
-
-    fig = plt.figure()
-
-    ax = fig.add_axes([0.12, 0.12, 0.77, 0.63])
+def gen_chart (df):
+    fig, (ax0, ax1, ax2, ax3) = plt.subplots(nrows = 4, figsize = (15, 10))
 
     for column in df.columns.values.tolist():
 
         if column != 'time':
 
-            x = df[column].values
+            y = df[column].values
 
-            y = df['time'].values
+            x = df['time'].values
 
-            ax.plot(y, x, label = column)
+            ax0.plot(x, y, label = column)
+    ax0.set_title('All measurments ordered by time of receiving package')
+    ax0.set_ylim(auto=True)
 
-            print(x, y)
+    ax1.plot(df['time'].values, df['temperature_cansat'].values, label = 'temperature_cansat')
+    ax1.plot(df['time'].values, df['temperature_ground'].values, label = 'temperature_ground')
 
-    ax.set(xlabel = 'time')
-    ax.set(ylabel = 'values')
+    ax1.set_title("Temp cansat and temp ground")
+    ax1.set_ylim(auto=True)
 
-    
-    ax.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc='lower left', ncol = 2, mode = 'expand', borderaxespad=0.)
+    ax1.set(ylabel = 'temperature [deg C]')
+    ax1.set(xlabel = 'time')
 
-    # Update the plot
-    plt.show()
+    ax2.plot(df['time'].values, df['pressure_cansat'].values, label = 'pressure_cansat')
+    ax2.plot(df['time'].values, df['pressure_ground'].values, label = 'pressure_ground')
 
-    plt.savefig('test.png')
+    ax2.set_title("Press cansat and press ground")
+    ax2.set_ylim(auto=True)
 
+    ax2.set(ylabel = 'pressure [hPa]')
+    ax2.set(xlabel = 'time')
+
+    ax3.plot(df['time'].values, df['speed'].values, label = 'speed')
+    ax3.plot(df['time'].values, df['acceleration'].values, label = 'acceleration')
+    ax3.plot(df['time'].values, df['alti'].values, label = 'altitude')
+
+    ax3.set_title("Speed, high, altitude over time")
+    ax3.set_ylim(auto=True)
+
+    ax3.set(ylabel = 'value')
+    ax3.set(xlabel = 'time')
+
+    fig.tight_layout()
+    plt.savefig('a.png')
 
 
 structured_data = (load_data_from_sd('test.txt'))
@@ -101,4 +115,5 @@ df = pd.DataFrame(structured_data, columns=['time', 'rssi', 'temperature_cansat'
 
 print(df)
 
-gen_chart(df)
+#gen_chart(df)
+test(df)
