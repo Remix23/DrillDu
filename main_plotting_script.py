@@ -58,19 +58,24 @@ def load_data_from_sd (filename):
 
 def gen_chart(df):
 
-    # Data for plotting
-    t = np.arange(0.0, 2.0, 0.01)
-    s = 1 + np.sin(2 * np.pi * t)
+    for column in df.columns.values.tolist():
 
-    fig, ax = plt.subplots()
-    ax.plot(t, s)
+        if column != 'time':
 
-    ax.set(xlabel='time (s)', ylabel='voltage (mV)',
-        title='About as simple as it gets, folks')
-    ax.grid()
+            x = df[column].values
 
-    fig.savefig("test.png")
-    plt.show()
+            y = df['time'].values
+
+            plt.plot(y, x, label = column)
+
+            print(x, y)
+
+    plt.title('Log from cansat')
+    plt.xlabel('time')
+    plt.ylabel('values')
+
+    plt.legend()
+    plt.savefig('test.png')
 
 
 
@@ -85,3 +90,5 @@ structured_data = np.hstack((structured_data, v.reshape(5, 1), a.reshape(5, 1)))
 df = pd.DataFrame(structured_data, columns=['time', 'rssi', 'temperature_cansat', 'pressure_cansat', 'temperature_ground', 'pressure_ground', 'alti', 'speed', 'acceleration'])   
 
 print(df)
+
+gen_chart(df)
