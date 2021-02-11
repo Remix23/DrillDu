@@ -1,0 +1,40 @@
+10
+Package #1
+RSSI = -123
+Temperature cansat = 24.45 deg C
+Presure cansat = 999.3 hPa
+Temperature ground = 12.56 deg C
+Presure ground = 1000.6 hPa
+Altitude = 100 m
+11
+Package #1
+RSSI = -123
+Temperature cansat = 24.45 deg C
+Presure cansat = 999.3 hPa
+Temperature ground = 12.56 deg C
+Presure ground = 1000.6 hPa
+Altitude = 90 m
+12
+Package #1
+RSSI = -123
+Temperature cansat = 24.45 deg C
+Presure cansat = 999.3 hPa
+Temperature ground = 12.56 deg C
+Presure ground = 1000.6 hPa
+Altitude = 70 m
+13
+Package #1
+RSSI = -123
+Temperature cansat = 24.45 deg C
+Presure cansat = 999.3 hPa
+Temperature ground = 12.56 deg C
+Presure ground = 1000.6 hPa
+Altitude = 40 m
+14
+Package #1
+RSSI = -123
+Temperature cansat = 24.45 deg C
+Presure cansat = 999.3 hPa
+Temperature ground = 12.56 deg C
+Presure ground = 1000.6 hPa
+Altitude = 0 m
