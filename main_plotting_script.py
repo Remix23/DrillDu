@@ -57,6 +57,9 @@ def load_data_from_sd (filename):
     return data
 
 def gen_chart (df):
+
+    colours = {'rssi': 'grey', 'temperature_cansat':'orange', 'pressure_cansat': 'blue', 'temperature_ground': 'red', 'pressure_ground': 'darkblue', 'alti': 'green', 'acceleration': 'yellow', 'speed': 'black'}
+
     fig, (ax0, ax1, ax2, ax3) = plt.subplots(nrows = 4, figsize = (15, 10))
 
     for column in df.columns.values.tolist():
@@ -67,12 +70,13 @@ def gen_chart (df):
 
             x = df['time'].values
 
-            ax0.plot(x, y, label = column)
+            ax0.plot(x, y, label = column, color = colours[column])
     ax0.set_title('All measurments ordered by time of receiving package')
     ax0.set_ylim(auto=True)
+    ax0.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
 
-    ax1.plot(df['time'].values, df['temperature_cansat'].values, label = 'temperature_cansat')
-    ax1.plot(df['time'].values, df['temperature_ground'].values, label = 'temperature_ground')
+    ax1.plot(df['time'].values, df['temperature_cansat'].values, label = 'temperature_cansat', color = colours['temperature_cansat'])
+    ax1.plot(df['time'].values, df['temperature_ground'].values, label = 'temperature_ground', color = colours['temperature_ground'])
 
     ax1.set_title("Temp cansat and temp ground")
     ax1.set_ylim(auto=True)
@@ -80,8 +84,10 @@ def gen_chart (df):
     ax1.set(ylabel = 'temperature [deg C]')
     ax1.set(xlabel = 'time')
 
-    ax2.plot(df['time'].values, df['pressure_cansat'].values, label = 'pressure_cansat')
-    ax2.plot(df['time'].values, df['pressure_ground'].values, label = 'pressure_ground')
+    ax1.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
+
+    ax2.plot(df['time'].values, df['pressure_cansat'].values, label = 'pressure_cansat', color = colours['pressure_cansat'])
+    ax2.plot(df['time'].values, df['pressure_ground'].values, label = 'pressure_ground', color = colours['pressure_ground'])
 
     ax2.set_title("Press cansat and press ground")
     ax2.set_ylim(auto=True)
@@ -89,15 +95,19 @@ def gen_chart (df):
     ax2.set(ylabel = 'pressure [hPa]')
     ax2.set(xlabel = 'time')
 
-    ax3.plot(df['time'].values, df['speed'].values, label = 'speed')
-    ax3.plot(df['time'].values, df['acceleration'].values, label = 'acceleration')
-    ax3.plot(df['time'].values, df['alti'].values, label = 'altitude')
+    ax2.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
+
+    ax3.plot(df['time'].values, df['speed'].values, label = 'speed [m/s]', color = colours['speed'])
+    ax3.plot(df['time'].values, df['acceleration'].values, label = 'acceleration [m/s^2]', color = colours['acceleration'])
+    ax3.plot(df['time'].values, df['alti'].values, label = 'altitude [m]', color = colours['alti'])
 
     ax3.set_title("Speed, high, altitude over time")
     ax3.set_ylim(auto=True)
 
     ax3.set(ylabel = 'value')
     ax3.set(xlabel = 'time')
+
+    ax3.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
 
     fig.tight_layout()
     plt.savefig('a.png')
