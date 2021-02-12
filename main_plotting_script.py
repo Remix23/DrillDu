@@ -1,7 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sn
-from os.path import exists
 import pandas as pd
 from math import fabs
 
