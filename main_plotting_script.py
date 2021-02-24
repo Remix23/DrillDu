@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from math import fabs
 
+colours = {'rssi': 'grey', 'temperature_cansat':'orange', 'pressure_cansat': 'blue', 'temperature_ground': 'red', 'pressure_ground': 'darkblue', 'altitude': 'green', 'acceleration': 'yellow', 'speed': 'black'}
+endings = {'rssi': 'dBm', 'temperature_cansat':'orange', 'pressure_cansat': 'blue', 'temperature_ground': 'red', 'pressure_ground': 'darkblue', 'altitude': 'green', 'acceleration': 'yellow', 'speed': 'black'}
+
 def calculate_velocity (time_set, altitude_set):
 
     velocity = []
@@ -36,11 +39,11 @@ def load_data_from_sd (filename):
     data = np.zeros((len(all_lines) // 7, 7), dtype=float)
 
     for i in range(0, len(all_lines), 8):
-        t = float(all_lines[i])
+        t = float(all_lines[i][19: len(all_lines[i])])
         r = float(all_lines[i + 2][8: len(all_lines[i + 2])])
-        tc = float(all_lines[i + 3][22: len(all_lines[i + 3]) - 6])
+        tc = float(all_lines[i + 3][21: len(all_lines[i + 3]) - 6])
         pc = float(all_lines[i + 4][17: len(all_lines[i + 4]) - 4])
-        tg = float(all_lines[i + 5][22: len(all_lines[i + 5]) - 6])
+        tg = float(all_lines[i + 5][21: len(all_lines[i + 5]) - 6])
         pg = float(all_lines[i + 6][17: len(all_lines[i + 6]) - 4])
         a = float(all_lines[i + 7][11: len(all_lines[i + 7]) - 2])
 
@@ -54,9 +57,7 @@ def load_data_from_sd (filename):
 
     return data
 
-def gen_chart (df):
-
-    colours = {'rssi': 'grey', 'temperature_cansat':'orange', 'pressure_cansat': 'blue', 'temperature_ground': 'red', 'pressure_ground': 'darkblue', 'alti': 'green', 'acceleration': 'yellow', 'speed': 'black'}
+def gen_default_charts (df):
 
     fig, (ax0, ax1, ax2, ax3) = plt.subplots(nrows = 4, figsize = (15, 10))
 
@@ -69,6 +70,7 @@ def gen_chart (df):
             x = df['time'].values
 
             ax0.plot(x, y, label = column, color = colours[column])
+
     ax0.set_title('All measurments ordered by time of receiving package')
     ax0.set_ylim(auto=True)
     ax0.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
@@ -80,7 +82,7 @@ def gen_chart (df):
     ax1.set_ylim(auto=True)
 
     ax1.set(ylabel = 'temperature [deg C]')
-    ax1.set(xlabel = 'time')
+    ax1.set(xlabel = 'time [s]')
 
     ax1.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
 
@@ -91,25 +93,70 @@ def gen_chart (df):
     ax2.set_ylim(auto=True)
 
     ax2.set(ylabel = 'pressure [hPa]')
-    ax2.set(xlabel = 'time')
+    ax2.set(xlabel = 'time [s]')
 
     ax2.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
 
     ax3.plot(df['time'].values, df['speed'].values, label = 'speed [m/s]', color = colours['speed'])
     ax3.plot(df['time'].values, df['acceleration'].values, label = 'acceleration [m/s^2]', color = colours['acceleration'])
-    ax3.plot(df['time'].values, df['alti'].values, label = 'altitude [m]', color = colours['alti'])
+    ax3.plot(df['time'].values, df['altitude'].values, label = 'altitude [m]', color = colours['altitude'])
 
     ax3.set_title("Speed, high, altitude over time")
     ax3.set_ylim(auto=True)
 
     ax3.set(ylabel = 'value')
-    ax3.set(xlabel = 'time')
+    ax3.set(xlabel = 'time [s]')
 
     ax3.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
 
     fig.tight_layout()
-    plt.savefig('a.png')
+    plt.savefig('default_chart.png')
 
+def gen_any_charts (df):
+
+    ile_wykresow = int(input("Podaj liczbę wykresów, które chcesz wygenerować: "))
+
+    if ile_wykresow <= 0:
+        return 
+
+    fig, axes = plt.subplots(nrows=ile_wykresow, figsize = (5 * (ile_wykresow + 1), 5 * ile_wykresow))
+
+    if ile_wykresow == 1:
+        availbe = ['time', 'rssi', 'temperature_cansat', 'pressure_cansat', 'temperature_ground', 'pressure_ground', 'altitude', 'speed', 'acceleration']
+        x_title = input(f'Podaj oś x (poziomą) dostępne: {availbe}: ')
+        availbe.remove(x_title)
+        y_title = input(f'Podaj oś y (poziomą) dostępne: {availbe}: ')
+
+        axes.plot(df[x_title].values, df[y_title].values, label = y_title, color = colours[y_title])
+
+        axes.set_title(f'{y_title.title()} over {x_title.title()}')
+        axes.set_ylim(auto=True)
+
+        axes.set(ylabel = y_title)
+        axes.set(xlabel = x_title)
+
+        axes.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
+
+    else:
+
+        for i in range (ile_wykresow):
+            availbe = ['time', 'rssi', 'temperature_cansat', 'pressure_cansat', 'temperature_ground', 'pressure_ground', 'altitude', 'speed', 'acceleration']
+            x_title = input(f'Podaj oś x (poziomą) dostępne: {availbe}: ')
+            availbe.remove(x_title)
+            y_title = input(f'Podaj oś y (poziomą) dostępne: {availbe}: ')
+
+            axes[i].plot(df[x_title].values, df[y_title].values, label = y_title, color = colours[y_title])
+
+            axes[i].set_title(f'{y_title.title()} over {x_title.title()}')
+            axes[i].set_ylim(auto=True)
+
+            axes[i].set(ylabel = y_title)
+            axes[i].set(xlabel = x_title)
+
+            axes[i].legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
+
+    fig.tight_layout()
+    plt.savefig(f'{y_title.title()} over {x_title.title()}.png')
 
 structured_data = (load_data_from_sd('test.txt'))
 
@@ -119,8 +166,10 @@ a = calculate_acceleration(structured_data[:, 0], v)
 
 structured_data = np.hstack((structured_data, v.reshape(5, 1), a.reshape(5, 1)))
 
-df = pd.DataFrame(structured_data, columns=['time', 'rssi', 'temperature_cansat', 'pressure_cansat', 'temperature_ground', 'pressure_ground', 'alti', 'speed', 'acceleration'])
+df = pd.DataFrame(structured_data, columns=['time', 'rssi', 'temperature_cansat', 'pressure_cansat', 'temperature_ground', 'pressure_ground', 'altitude', 'speed', 'acceleration'])
 
-gen_chart(df)
+gen_default_charts(df)
+
+#gen_any_charts(df)
 
 print(df)
