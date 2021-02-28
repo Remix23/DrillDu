@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.section {
+    height: 100%;
+    width: 100%;
+}
+
+.nav-top {
+    
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+.nav-list-element, .nav-link {
+    color: rgb(57, 72, 211);
+    text-decoration: none;
+}
+
+
+

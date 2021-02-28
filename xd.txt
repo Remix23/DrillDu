@@ -1,0 +1,1776 @@
+Package send time = 10.00
+Package #1
+RSSI = -65
+Temperature cansat = 1019.79 deg C
+Presure cansat = 1020.09 hPa
+Temperature ground = 22.96 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.51 m
+Package send time = 822.00
+Package #2
+RSSI = -65
+Temperature cansat = 1019.79 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 22.98 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.76 m
+Package send time = 1424.00
+Package #3
+RSSI = -65
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.11 hPa
+Temperature ground = 22.99 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.54 m
+Package send time = 2027.00
+Package #4
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.11 hPa
+Temperature ground = 22.99 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.43 m
+Package send time = 2629.00
+Package #5
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 22.99 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.57 m
+Package send time = 3234.00
+Package #6
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.11 hPa
+Temperature ground = 22.99 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.47 m
+Package send time = 3836.00
+Package #7
+RSSI = -65
+Temperature cansat = 1019.78 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.99 m
+Package send time = 4439.00
+Package #8
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.12 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.45 m
+Package send time = 5041.00
+Package #9
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.61 m
+Package send time = 5643.00
+Package #10
+RSSI = -64
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.91 m
+Package send time = 6266.00
+Package #11
+RSSI = -65
+Temperature cansat = 1019.77 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.40 hPa
+Altitude = -3.07 m
+Package send time = 6868.00
+Package #12
+RSSI = -64
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.77 m
+Package send time = 7470.00
+Package #13
+RSSI = -66
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.61 m
+Package send time = 8073.00
+Package #14
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.72 m
+Package send time = 8675.00
+Package #15
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.55 m
+Package send time = 9280.00
+Package #16
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.12 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.55 m
+Package send time = 9882.00
+Package #17
+RSSI = -64
+Temperature cansat = 1019.78 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.72 hPa
+Altitude = -3.09 m
+Package send time = 10485.00
+Package #18
+RSSI = -65
+Temperature cansat = 1019.78 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.64 hPa
+Altitude = -3.01 m
+Package send time = 11087.00
+Package #19
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.77 m
+Package send time = 11689.00
+Package #20
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.00 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.77 m
+Package send time = 12295.00
+Package #21
+RSSI = -65
+Temperature cansat = 1019.79 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.88 m
+Package send time = 12897.00
+Package #22
+RSSI = -66
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.76 m
+Package send time = 13499.00
+Package #23
+RSSI = -65
+Temperature cansat = 1019.79 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.90 m
+Package send time = 14101.00
+Package #24
+RSSI = -64
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.12 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.63 m
+Package send time = 14704.00
+Package #25
+RSSI = -65
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.73 m
+Package send time = 15309.00
+Package #26
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.74 m
+Package send time = 15911.00
+Package #27
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.52 m
+Package send time = 16514.00
+Package #28
+RSSI = -64
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.48 m
+Package send time = 17116.00
+Package #29
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.80 m
+Package send time = 17718.00
+Package #30
+RSSI = -64
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.63 m
+Package send time = 18324.00
+Package #31
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.11 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.46 m
+Package send time = 18926.00
+Package #32
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.65 m
+Package send time = 19528.00
+Package #33
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.61 m
+Package send time = 20130.00
+Package #34
+RSSI = -64
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.64 hPa
+Altitude = -3.04 m
+Package send time = 20733.00
+Package #35
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.94 m
+Package send time = 21338.00
+Package #36
+RSSI = -64
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.82 m
+Package send time = 21940.00
+Package #37
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.77 m
+Package send time = 22543.00
+Package #38
+RSSI = -64
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.77 m
+Package send time = 23145.00
+Package #39
+RSSI = -64
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.88 hPa
+Altitude = -2.93 m
+Package send time = 23747.00
+Package #40
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.68 m
+Package send time = 24353.00
+Package #41
+RSSI = -64
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.64 m
+Package send time = 24955.00
+Package #42
+RSSI = -64
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.64 m
+Package send time = 25557.00
+Package #43
+RSSI = -65
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.78 m
+Package send time = 26159.00
+Package #44
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.70 m
+Package send time = 26762.00
+Package #45
+RSSI = -65
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.85 m
+Package send time = 27367.00
+Package #46
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.86 m
+Package send time = 27969.00
+Package #47
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.88 hPa
+Altitude = -2.61 m
+Package send time = 28572.00
+Package #48
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.65 m
+Package send time = 29174.00
+Package #49
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.91 m
+Package send time = 29776.00
+Package #50
+RSSI = -65
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.88 hPa
+Altitude = -2.89 m
+Package send time = 30381.00
+Package #51
+RSSI = -64
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.01 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.75 m
+Package send time = 30984.00
+Package #52
+RSSI = -66
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.49 m
+Package send time = 31586.00
+Package #53
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.92 m
+Package send time = 32188.00
+Package #54
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.75 m
+Package send time = 32790.00
+Package #55
+RSSI = -65
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.95 m
+Package send time = 33396.00
+Package #56
+RSSI = -67
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.94 m
+Package send time = 33998.00
+Package #57
+RSSI = -67
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.88 hPa
+Altitude = -2.39 m
+Package send time = 34601.00
+Package #58
+RSSI = -68
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.86 m
+Package send time = 35203.00
+Package #59
+RSSI = -68
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.74 m
+Package send time = 35805.00
+Package #60
+RSSI = -68
+Temperature cansat = 1019.78 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.96 hPa
+Altitude = -3.17 m
+Package send time = 36411.00
+Package #61
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.89 m
+Package send time = 37013.00
+Package #62
+RSSI = -66
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.80 m
+Package send time = 37615.00
+Package #63
+RSSI = -66
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.64 hPa
+Altitude = -3.15 m
+Package send time = 38217.00
+Package #64
+RSSI = -65
+Temperature cansat = 1019.80 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.89 m
+Package send time = 38823.00
+Package #65
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.72 m
+Package send time = 39425.00
+Package #66
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.14 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.88 hPa
+Altitude = -2.53 m
+Package send time = 40028.00
+Package #67
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.82 m
+Package send time = 40630.00
+Package #68
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.76 m
+Package send time = 41232.00
+Package #69
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -3.03 m
+Package send time = 41838.00
+Package #70
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.73 m
+Package send time = 42440.00
+Package #71
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.85 m
+Package send time = 43042.00
+Package #72
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.80 m
+Package send time = 43644.00
+Package #73
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.73 m
+Package send time = 44247.00
+Package #74
+RSSI = -66
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.76 m
+Package send time = 44852.00
+Package #75
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.64 hPa
+Altitude = -3.13 m
+Package send time = 45455.00
+Package #76
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.67 m
+Package send time = 46057.00
+Package #77
+RSSI = -67
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.97 m
+Package send time = 46659.00
+Package #78
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.97 m
+Package send time = 47261.00
+Package #79
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.89 m
+Package send time = 47867.00
+Package #80
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.15 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.51 m
+Package send time = 48469.00
+Package #81
+RSSI = -66
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.88 m
+Package send time = 49071.00
+Package #82
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.88 m
+Package send time = 49674.00
+Package #83
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.57 m
+Package send time = 50276.00
+Package #84
+RSSI = -65
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.82 m
+Package send time = 50882.00
+Package #85
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.89 m
+Package send time = 51484.00
+Package #86
+RSSI = -65
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.73 m
+Package send time = 52086.00
+Package #87
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.78 m
+Package send time = 52688.00
+Package #88
+RSSI = -66
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.64 hPa
+Altitude = -3.01 m
+Package send time = 53291.00
+Package #89
+RSSI = -65
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.66 m
+Package send time = 53896.00
+Package #90
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.79 m
+Package send time = 54498.00
+Package #91
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.80 m
+Package send time = 55101.00
+Package #92
+RSSI = -66
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.92 m
+Package send time = 55731.00
+Package #93
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.67 m
+Package send time = 56333.00
+Package #94
+RSSI = -67
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.66 m
+Package send time = 56938.00
+Package #95
+RSSI = -65
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -3.10 m
+Package send time = 57541.00
+Package #96
+RSSI = -64
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.32 hPa
+Altitude = -2.66 m
+Package send time = 58143.00
+Package #97
+RSSI = -66
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.97 m
+Package send time = 58745.00
+Package #98
+RSSI = -65
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.96 hPa
+Altitude = -2.63 m
+Package send time = 59348.00
+Package #99
+RSSI = -66
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.95 m
+Package send time = 59953.00
+Package #100
+RSSI = -66
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.61 m
+Package send time = 60555.00
+Package #101
+RSSI = -66
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.64 m
+Package send time = 61158.00
+Package #102
+RSSI = -64
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.13 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.46 m
+Package send time = 61760.00
+Package #103
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -3.07 m
+Package send time = 62362.00
+Package #104
+RSSI = -66
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.87 m
+Package send time = 62968.00
+Package #105
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.73 m
+Package send time = 63570.00
+Package #106
+RSSI = -66
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -3.14 m
+Package send time = 64173.00
+Package #107
+RSSI = -65
+Temperature cansat = 1019.81 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -3.10 m
+Package send time = 64775.00
+Package #108
+RSSI = -65
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.63 m
+Package send time = 65377.00
+Package #109
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.99 m
+Package send time = 65983.00
+Package #110
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.69 m
+Package send time = 66585.00
+Package #111
+RSSI = -66
+Temperature cansat = 1019.82 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.83 m
+Package send time = 67187.00
+Package #112
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.67 m
+Package send time = 67790.00
+Package #113
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.98 m
+Package send time = 68392.00
+Package #114
+RSSI = -66
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.32 hPa
+Altitude = -2.71 m
+Package send time = 68997.00
+Package #115
+RSSI = -65
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -3.03 m
+Package send time = 69600.00
+Package #116
+RSSI = -66
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.82 m
+Package send time = 70202.00
+Package #117
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.74 m
+Package send time = 70804.00
+Package #118
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.84 m
+Package send time = 71410.00
+Package #119
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.58 m
+Package send time = 72012.00
+Package #120
+RSSI = -64
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.81 m
+Package send time = 72615.00
+Package #121
+RSSI = -67
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -3.17 m
+Package send time = 73217.00
+Package #122
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.94 m
+Package send time = 73819.00
+Package #123
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.93 m
+Package send time = 74425.00
+Package #124
+RSSI = -65
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.87 m
+Package send time = 75027.00
+Package #125
+RSSI = -66
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.77 m
+Package send time = 75629.00
+Package #126
+RSSI = -64
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.88 m
+Package send time = 76232.00
+Package #127
+RSSI = -64
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.78 m
+Package send time = 76834.00
+Package #128
+RSSI = -67
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.96 m
+Package send time = 77439.00
+Package #129
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.95 m
+Package send time = 78042.00
+Package #130
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.44 m
+Package send time = 78644.00
+Package #131
+RSSI = -66
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.84 m
+Package send time = 79246.00
+Package #132
+RSSI = -65
+Temperature cansat = 1019.90 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.56 m
+Package send time = 79849.00
+Package #133
+RSSI = -66
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.71 m
+Package send time = 80454.00
+Package #134
+RSSI = -64
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.60 m
+Package send time = 81057.00
+Package #135
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -3.09 m
+Package send time = 81659.00
+Package #136
+RSSI = -64
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.77 m
+Package send time = 82261.00
+Package #137
+RSSI = -64
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.59 m
+Package send time = 82864.00
+Package #138
+RSSI = -66
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.54 m
+Package send time = 83469.00
+Package #139
+RSSI = -64
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.61 m
+Package send time = 84072.00
+Package #140
+RSSI = -65
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.31 m
+Package send time = 84674.00
+Package #141
+RSSI = -66
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.83 m
+Package send time = 85276.00
+Package #142
+RSSI = -65
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.32 hPa
+Altitude = -2.58 m
+Package send time = 85879.00
+Package #143
+RSSI = -66
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.75 m
+Package send time = 86484.00
+Package #144
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.73 m
+Package send time = 87086.00
+Package #145
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.23 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.92 m
+Package send time = 87689.00
+Package #146
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.95 m
+Package send time = 88291.00
+Package #147
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.78 m
+Package send time = 88893.00
+Package #148
+RSSI = -64
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.75 m
+Package send time = 89499.00
+Package #149
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -3.05 m
+Package send time = 90101.00
+Package #150
+RSSI = -67
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.66 m
+Package send time = 90704.00
+Package #151
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.99 m
+Package send time = 91306.00
+Package #152
+RSSI = -64
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.85 m
+Package send time = 91908.00
+Package #153
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.75 m
+Package send time = 92514.00
+Package #154
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.89 m
+Package send time = 93116.00
+Package #155
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.23 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.98 m
+Package send time = 93719.00
+Package #156
+RSSI = -64
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.76 m
+Package send time = 94321.00
+Package #157
+RSSI = -65
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.61 m
+Package send time = 94927.00
+Package #158
+RSSI = -65
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.96 m
+Package send time = 95529.00
+Package #159
+RSSI = -65
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.32 hPa
+Altitude = -2.64 m
+Package send time = 96131.00
+Package #160
+RSSI = -65
+Temperature cansat = 1019.90 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.60 m
+Package send time = 96734.00
+Package #161
+RSSI = -65
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.71 m
+Package send time = 97336.00
+Package #162
+RSSI = -65
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.58 m
+Package send time = 97941.00
+Package #163
+RSSI = -64
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.23 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.83 m
+Package send time = 98544.00
+Package #164
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.24 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -3.09 m
+Package send time = 99146.00
+Package #165
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.23 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.94 m
+Package send time = 99748.00
+Package #166
+RSSI = -66
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.64 m
+Package send time = 100350.00
+Package #167
+RSSI = -64
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.23 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.96 m
+Package send time = 100955.00
+Package #168
+RSSI = -64
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.62 m
+Package send time = 101557.00
+Package #169
+RSSI = -66
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.78 m
+Package send time = 102160.00
+Package #170
+RSSI = -64
+Temperature cansat = 1019.90 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.35 m
+Package send time = 102762.00
+Package #171
+RSSI = -65
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.62 m
+Package send time = 103364.00
+Package #172
+RSSI = -64
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.50 m
+Package send time = 103969.00
+Package #173
+RSSI = -65
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.57 m
+Package send time = 104572.00
+Package #174
+RSSI = -65
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.40 m
+Package send time = 105174.00
+Package #175
+RSSI = -64
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.76 m
+Package send time = 105776.00
+Package #176
+RSSI = -65
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.63 m
+Package send time = 106378.00
+Package #177
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.80 m
+Package send time = 106984.00
+Package #178
+RSSI = -64
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.44 m
+Package send time = 107586.00
+Package #179
+RSSI = -66
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.17 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.44 m
+Package send time = 108188.00
+Package #180
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -3.12 m
+Package send time = 108791.00
+Package #181
+RSSI = -66
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.86 m
+Package send time = 109393.00
+Package #182
+RSSI = -65
+Temperature cansat = 1019.83 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.82 m
+Package send time = 109998.00
+Package #183
+RSSI = -65
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.89 m
+Package send time = 110628.00
+Package #184
+RSSI = -66
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.87 m
+Package send time = 111231.00
+Package #185
+RSSI = -64
+Temperature cansat = 1019.84 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.92 m
+Package send time = 111833.00
+Package #186
+RSSI = -65
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.79 m
+Package send time = 112435.00
+Package #187
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.78 m
+Package send time = 113041.00
+Package #188
+RSSI = -66
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.16 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.41 m
+Package send time = 113643.00
+Package #189
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.79 m
+Package send time = 114245.00
+Package #190
+RSSI = -65
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.32 hPa
+Altitude = -2.80 m
+Package send time = 114847.00
+Package #191
+RSSI = -64
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.85 m
+Package send time = 115453.00
+Package #192
+RSSI = -65
+Temperature cansat = 1019.85 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.82 m
+Package send time = 116055.00
+Package #193
+RSSI = -65
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.79 m
+Package send time = 116657.00
+Package #194
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.18 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.64 m
+Package send time = 117260.00
+Package #195
+RSSI = -65
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.73 m
+Package send time = 117862.00
+Package #196
+RSSI = -64
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.83 m
+Package send time = 118467.00
+Package #197
+RSSI = -66
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.70 m
+Package send time = 119070.00
+Package #198
+RSSI = -63
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.23 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.32 hPa
+Altitude = -2.94 m
+Package send time = 119672.00
+Package #199
+RSSI = -64
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.79 m
+Package send time = 120274.00
+Package #200
+RSSI = -64
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.82 m
+Package send time = 120876.00
+Package #201
+RSSI = -63
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.78 m
+Package send time = 121482.00
+Package #202
+RSSI = -63
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.77 m
+Package send time = 122084.00
+Package #203
+RSSI = -63
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.53 m
+Package send time = 122686.00
+Package #204
+RSSI = -63
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.69 m
+Package send time = 123289.00
+Package #205
+RSSI = -63
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.04 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.76 m
+Package send time = 123891.00
+Package #206
+RSSI = -63
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.74 m
+Package send time = 124496.00
+Package #207
+RSSI = -63
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.72 hPa
+Altitude = -2.71 m
+Package send time = 125099.00
+Package #208
+RSSI = -64
+Temperature cansat = 1019.86 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.91 m
+Package send time = 125701.00
+Package #209
+RSSI = -63
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.67 m
+Package send time = 126303.00
+Package #210
+RSSI = -63
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.69 m
+Package send time = 126905.00
+Package #211
+RSSI = -63
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.71 m
+Package send time = 127511.00
+Package #212
+RSSI = -63
+Temperature cansat = 1019.90 deg C
+Presure cansat = 1020.19 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.40 m
+Package send time = 128113.00
+Package #213
+RSSI = -64
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.82 m
+Package send time = 128715.00
+Package #214
+RSSI = -63
+Temperature cansat = 1019.91 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.16 hPa
+Altitude = -2.46 m
+Package send time = 129318.00
+Package #215
+RSSI = -63
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.48 hPa
+Altitude = -2.68 m
+Package send time = 129923.00
+Package #216
+RSSI = -64
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.24 hPa
+Altitude = -2.59 m
+Package send time = 130526.00
+Package #217
+RSSI = -63
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.80 hPa
+Altitude = -2.88 m
+Package send time = 131128.00
+Package #218
+RSSI = -63
+Temperature cansat = 1019.87 deg C
+Presure cansat = 1020.20 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.40 hPa
+Altitude = -2.78 m
+Package send time = 131730.00
+Package #219
+RSSI = -63
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.25 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.96 m
+Package send time = 132332.00
+Package #220
+RSSI = -62
+Temperature cansat = 1019.88 deg C
+Presure cansat = 1020.21 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.70 m
+Package send time = 132938.00
+Package #221
+RSSI = -62
+Temperature cansat = 1019.90 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.03 deg C
+Presure ground = 22.56 hPa
+Altitude = -2.65 m
+Package send time = 133540.00
+Package #222
+RSSI = -63
+Temperature cansat = 1019.89 deg C
+Presure cansat = 1020.22 hPa
+Temperature ground = 23.02 deg C
+Presure ground = 22.64 hPa
+Altitude = -2.67 m

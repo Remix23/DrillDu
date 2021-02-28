@@ -11,7 +11,10 @@ def calculate_velocity (time_set, altitude_set):
     velocity = []
 
     for i in range (1, len(time_set)):
-        v = fabs(altitude_set[i] - altitude_set[i - 1]) / fabs(time_set[i] - time_set[i - 1]) 
+        if fabs(time_set[i] - time_set[i - 1]) != 0:
+            v = fabs(altitude_set[i] - altitude_set[i - 1]) / fabs(time_set[i] - time_set[i - 1]) 
+        else:
+            v = -1
         velocity.append(v)
 
     velocity.insert(0, 0)
@@ -23,7 +26,10 @@ def calculate_acceleration (time_set, velocity_set):
     acceleration = []
 
     for i in range (1, len(time_set)):
-        a = fabs(velocity_set[i] - velocity_set[i - 1]) / fabs(time_set[i] - time_set[i - 1])
+        if fabs(time_set[i] - time_set[i - 1]) != 0:
+            a = fabs(velocity_set[i] - velocity_set[i - 1]) / fabs(time_set[i] - time_set[i - 1])
+        else:
+            a = -1
         acceleration.append(a)
 
     acceleration.insert(0, 0)
@@ -36,24 +42,32 @@ def load_data_from_sd (filename):
         for line in f:
             all_lines.append(line.rstrip())
 
-    data = np.zeros((len(all_lines) // 7, 7), dtype=float)
+    data = np.zeros((len(all_lines) // 8, 7), dtype=float)
 
     for i in range(0, len(all_lines), 8):
-        t = float(all_lines[i][19: len(all_lines[i])])
-        r = float(all_lines[i + 2][8: len(all_lines[i + 2])])
-        tc = float(all_lines[i + 3][21: len(all_lines[i + 3]) - 6])
-        pc = float(all_lines[i + 4][17: len(all_lines[i + 4]) - 4])
-        tg = float(all_lines[i + 5][21: len(all_lines[i + 5]) - 6])
-        pg = float(all_lines[i + 6][17: len(all_lines[i + 6]) - 4])
-        a = float(all_lines[i + 7][11: len(all_lines[i + 7]) - 2])
-
-        data[i // 8,0] = t
-        data[i // 8,1] = r
-        data[i // 8,2] = tc
-        data[i // 8,3] = pc
-        data[i // 8,4] = tg
-        data[i // 8,5] = pg
-        data[i // 8,6] = a
+        try:
+            t = float(all_lines[i][19: len(all_lines[i])]) / 1000
+            r = float(all_lines[i + 2][8: len(all_lines[i + 2])])
+            tc = float(all_lines[i + 3][21: len(all_lines[i + 3]) - 6])
+            pc = float(all_lines[i + 4][17: len(all_lines[i + 4]) - 4])
+            tg = float(all_lines[i + 5][21: len(all_lines[i + 5]) - 6])
+            pg = float(all_lines[i + 6][17: len(all_lines[i + 6]) - 4])
+            a = float(all_lines[i + 7][11: len(all_lines[i + 7]) - 2])
+            data[i // 8, 0] = t
+            data[i // 8, 1] = r
+            data[i // 8, 2] = tc
+            data[i // 8, 3] = pc
+            data[i // 8, 4] = tg
+            data[i // 8, 5] = pg
+            data[i // 8, 6] = a
+        except Exception as e:
+            data[i // 8,0] = -1
+            data[i // 8,1] = -1
+            data[i // 8,2] = -1
+            data[i // 8,3] = -1
+            data[i // 8,4] = -1
+            data[i // 8,5] = -1
+            data[i // 8,6] = -1
 
     return data
 
@@ -122,12 +136,17 @@ def gen_any_charts (df):
     fig, axes = plt.subplots(nrows=ile_wykresow, figsize = (5 * (ile_wykresow + 1), 5 * ile_wykresow))
 
     if ile_wykresow == 1:
-        availbe = ['time', 'rssi', 'temperature_cansat', 'pressure_cansat', 'temperature_ground', 'pressure_ground', 'altitude', 'speed', 'acceleration']
+        availbe = ['packet number', 'time', 'rssi', 'temperature_cansat', 'pressure_cansat', 'temperature_ground', 'pressure_ground', 'altitude', 'speed', 'acceleration']
         x_title = input(f'Podaj oś x (poziomą) dostępne: {availbe}: ')
         availbe.remove(x_title)
+        if x_title != 'packet number':
+            availbe.remove('packet number')
         y_title = input(f'Podaj oś y (poziomą) dostępne: {availbe}: ')
 
-        axes.plot(df[x_title].values, df[y_title].values, label = y_title, color = colours[y_title])
+        if x_title == 'packet number':
+            axes.plot(df.index.values.tolist(), df[y_title].values, label = y_title, color = colours[y_title])
+        else:
+            axes.plot(df[x_title].values, df[y_title].values, label = y_title, color = colours[y_title])
 
         axes.set_title(f'{y_title.title()} over {x_title.title()}')
         axes.set_ylim(auto=True)
@@ -140,12 +159,17 @@ def gen_any_charts (df):
     else:
 
         for i in range (ile_wykresow):
-            availbe = ['time', 'rssi', 'temperature_cansat', 'pressure_cansat', 'temperature_ground', 'pressure_ground', 'altitude', 'speed', 'acceleration']
+            availbe = ['packet number', 'time', 'rssi', 'temperature_cansat', 'pressure_cansat', 'temperature_ground', 'pressure_ground', 'altitude', 'speed', 'acceleration']
             x_title = input(f'Podaj oś x (poziomą) dostępne: {availbe}: ')
             availbe.remove(x_title)
+            if x_title != 'packet number':
+                availbe.remove('packet number')
             y_title = input(f'Podaj oś y (poziomą) dostępne: {availbe}: ')
 
-            axes[i].plot(df[x_title].values, df[y_title].values, label = y_title, color = colours[y_title])
+            if x_title == 'packet number':
+                axes[i].plot(df.index.values.tolist(), df[y_title].values, label = y_title, color = colours[y_title])
+            else:
+                axes[i].plot(df[x_title].values, df[y_title].values, label = y_title, color = colours[y_title])
 
             axes[i].set_title(f'{y_title.title()} over {x_title.title()}')
             axes[i].set_ylim(auto=True)
@@ -158,18 +182,20 @@ def gen_any_charts (df):
     fig.tight_layout()
     plt.savefig(f'{y_title.title()} over {x_title.title()}.png')
 
-structured_data = (load_data_from_sd('test.txt'))
+structured_data = (load_data_from_sd('xd.txt'))
+
+print(structured_data)
 
 v = calculate_velocity(structured_data[:, 0], structured_data[:, -1])
 
 a = calculate_acceleration(structured_data[:, 0], v)
 
-structured_data = np.hstack((structured_data, v.reshape(5, 1), a.reshape(5, 1)))
+structured_data = np.hstack((structured_data, v.reshape((-1, 1)), a.reshape((-1, 1))))
 
 df = pd.DataFrame(structured_data, columns=['time', 'rssi', 'temperature_cansat', 'pressure_cansat', 'temperature_ground', 'pressure_ground', 'altitude', 'speed', 'acceleration'])
 
 gen_default_charts(df)
 
-#gen_any_charts(df)
+gen_any_charts(df)
 
 print(df)
