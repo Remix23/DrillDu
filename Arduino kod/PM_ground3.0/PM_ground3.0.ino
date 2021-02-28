@@ -15,10 +15,12 @@ int nr_of_digits_counter;
 int nr_of_digits_rssi;
 
 // debiging variables 
-bool is_sd_active = false;
+// only the is_lm_active has to hard coded, the rest are updating in the program process.
+
+bool is_sd_active = false; 
 bool is_radio_active = false;
 bool is_bmp_active = false;
-bool is_lm_active = false;
+bool is_lm_active = true;
 
 const int lm35_pin = A0; 
 

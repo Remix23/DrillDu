@@ -1,15 +1,15 @@
 #include <CanSatKit.h>
 #include <cmath>
-using namespace CanSatKit;
 #include <SPI.h>
 #include <SD.h>
 #include <Servo.h>
+
+using namespace CanSatKit;
 
 int counter = 1;
 bool led_state = false;
 const int led_pin = 13;
 
-unsigned long int procesor_start = millis();
 unsigned long int send_time;
 
 // servo setup
@@ -125,7 +125,7 @@ void loop() {
       SerialUSB.println(" deg C");
     }
     
-    send_time = millis () - procesor_start;
+    send_time = millis ();
     
     send_measurments_via_radio(counter, P, temperature, send_time);
 
@@ -408,7 +408,7 @@ int change_delay (int current_delay) {
   if (!is_on_ground) {
     return 300; // delay for the flight 
   } else {
-    if (millis() - procesor_start < 3600000){
+    if (millis() < 3600000){
       if (!is_drill_made) {
         return 300; // if we are in the ground but the drill doesn't go 
       } else {
