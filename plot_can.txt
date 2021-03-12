@@ -1,0 +1,20 @@
+Package send time = 10
+Package #1
+Temperature cansat = 24.45 deg C
+Presure cansat = 999.3 hPa
+Package send time = 11
+Package #1
+Temperature cansat = 24.45 deg C
+Presure cansat = 999.3 hPa
+Package send time = 12
+Package #1
+Temperature cansat = 24.45 deg C
+Presure cansat = 999.3 hPa
+Package send time = 13
+Package #1
+Temperature cansat = 24.45 deg C
+Presure cansat = 999.3 hPa
+Package send time = 14
+Package #1
+Temperature cansat = 24.45 deg C
+Presure cansat = 999.3 hPa

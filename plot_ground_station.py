@@ -85,14 +85,14 @@ def gen_default_charts (df):
 
             ax0.plot(x, y, label = column, color = colours[column])
 
-    ax0.set_title('All measurments ordered by time of receiving package')
+    ax0.set_title('All measurments ordered by time of receiving package over time')
     ax0.set_ylim(auto=True)
     ax0.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
 
     ax1.plot(df['time'].values, df['temperature_cansat'].values, label = 'temperature_cansat', color = colours['temperature_cansat'])
     ax1.plot(df['time'].values, df['temperature_ground'].values, label = 'temperature_ground', color = colours['temperature_ground'])
 
-    ax1.set_title("Temp cansat and temp ground")
+    ax1.set_title("Temp cansat and temp ground  over time")
     ax1.set_ylim(auto=True)
 
     ax1.set(ylabel = 'temperature [deg C]')
@@ -103,7 +103,7 @@ def gen_default_charts (df):
     ax2.plot(df['time'].values, df['pressure_cansat'].values, label = 'pressure_cansat', color = colours['pressure_cansat'])
     ax2.plot(df['time'].values, df['pressure_ground'].values, label = 'pressure_ground', color = colours['pressure_ground'])
 
-    ax2.set_title("Press cansat and press ground")
+    ax2.set_title("Press cansat and press ground over time")
     ax2.set_ylim(auto=True)
 
     ax2.set(ylabel = 'pressure [hPa]')
@@ -115,7 +115,7 @@ def gen_default_charts (df):
     ax3.plot(df['time'].values, df['acceleration'].values, label = 'acceleration [m/s^2]', color = colours['acceleration'])
     ax3.plot(df['time'].values, df['altitude'].values, label = 'altitude [m]', color = colours['altitude'])
 
-    ax3.set_title("Speed, high, altitude over time")
+    ax3.set_title("Speed, high, altitude over time over time")
     ax3.set_ylim(auto=True)
 
     ax3.set(ylabel = 'value')
