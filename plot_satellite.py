@@ -1,35 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from math import fabs
+import getdata
 
 colours = {'rssi': 'grey', 'temperature_cansat':'orange', 'pressure_cansat': 'blue', 'temperature_ground': 'red', 'pressure_ground': 'darkblue', 'altitude': 'green', 'acceleration': 'yellow', 'speed': 'black'}
-
-lines_of_data = 4
-
-def load_data_from_sd (filename):
-    all_lines = []
-    with open(filename) as f:
-        for line in f:
-            all_lines.append(line.rstrip())
-
-    data = np.zeros((len(all_lines) // lines_of_data, 3), dtype=float)
-
-    for i in range(0, len(all_lines), lines_of_data):
-
-        try:
-            t = float(all_lines[i][19: len(all_lines[i])]) / 1000
-            tc = float(all_lines[i + 2][21: len(all_lines[i + 2]) - 6])
-            pc = float(all_lines[i + 3][17: len(all_lines[i + 3]) - 4])
-            data[i // lines_of_data, 0] = t
-            data[i // lines_of_data, 1] = tc
-            data[i // lines_of_data, 2] = pc
-        except Exception as e:
-            data[i // lines_of_data,0] = -1
-            data[i // lines_of_data,1] = -1
-            data[i // lines_of_data,2] = -1
-
-    return data
 
 def gen_default_charts (df):
 
@@ -114,7 +88,7 @@ def gen_any_charts (df):
     fig.tight_layout()
     plt.savefig(f'{y_title.title()} over {x_title.title()}.png')
 
-structured_data = (load_data_from_sd('plot_can.txt'))
+structured_data = (getdata.load_data_from_sd_cansat('plot_can.txt', 4))
 
 df = pd.DataFrame(structured_data, columns=['time', 'temperature_cansat', 'pressure_cansat'])
 

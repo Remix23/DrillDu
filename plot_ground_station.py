@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from math import fabs
+import getdata
 
 colours = {'rssi': 'grey', 'temperature_cansat':'orange', 'pressure_cansat': 'blue', 'temperature_ground': 'red', 'pressure_ground': 'darkblue', 'altitude': 'green', 'acceleration': 'yellow', 'speed': 'black'}
 endings = {'rssi': 'dBm', 'temperature_cansat':'orange', 'pressure_cansat': 'blue', 'temperature_ground': 'red', 'pressure_ground': 'darkblue', 'altitude': 'green', 'acceleration': 'yellow', 'speed': 'black'}
@@ -35,41 +36,6 @@ def calculate_acceleration (time_set, velocity_set):
     acceleration.insert(0, 0)
 
     return np.array(acceleration)
-
-def load_data_from_sd (filename):
-    all_lines = []
-    with open(filename) as f:
-        for line in f:
-            all_lines.append(line.rstrip())
-
-    data = np.zeros((len(all_lines) // 8, 7), dtype=float)
-
-    for i in range(0, len(all_lines), 8):
-        try:
-            t = float(all_lines[i][19: len(all_lines[i])]) / 1000
-            r = float(all_lines[i + 2][8: len(all_lines[i + 2])])
-            tc = float(all_lines[i + 3][21: len(all_lines[i + 3]) - 6])
-            pc = float(all_lines[i + 4][17: len(all_lines[i + 4]) - 4])
-            tg = float(all_lines[i + 5][21: len(all_lines[i + 5]) - 6])
-            pg = float(all_lines[i + 6][17: len(all_lines[i + 6]) - 4])
-            a = float(all_lines[i + 7][11: len(all_lines[i + 7]) - 2])
-            data[i // 8, 0] = t
-            data[i // 8, 1] = r
-            data[i // 8, 2] = tc
-            data[i // 8, 3] = pc
-            data[i // 8, 4] = tg
-            data[i // 8, 5] = pg
-            data[i // 8, 6] = a
-        except Exception as e:
-            data[i // 8,0] = -1
-            data[i // 8,1] = -1
-            data[i // 8,2] = -1
-            data[i // 8,3] = -1
-            data[i // 8,4] = -1
-            data[i // 8,5] = -1
-            data[i // 8,6] = -1
-
-    return data
 
 def gen_default_charts (df):
 
@@ -182,7 +148,7 @@ def gen_any_charts (df):
     fig.tight_layout()
     plt.savefig(f'{y_title.title()} over {x_title.title()}.png')
 
-structured_data = (load_data_from_sd('xd.txt'))
+structured_data = (getdata.load_data_from_sd_ground('xd.txt', 8))
 
 print(structured_data)
 
