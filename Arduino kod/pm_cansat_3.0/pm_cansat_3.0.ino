@@ -40,7 +40,7 @@ bool is_radio_active = false;
 
 Radio radio(Pins::Radio::ChipSelect,
             Pins::Radio::DIO0,
-            433.0,
+            433.7,
             Bandwidth_125000_Hz,
             SpreadingFactor_9,
             CodingRate_4_8);
