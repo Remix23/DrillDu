@@ -4,6 +4,10 @@
 #include <SD.h>
 #include <Servo.h>
 
+// mpu readings 
+#include <MPU6050_tockn.h>
+#include <Wire.h>
+
 using namespace CanSatKit;
 
 int counter = 1;
@@ -29,6 +33,9 @@ bool sleeping_phase = false;
 float last_pressure_measurements [10];
 float last_temperature_measurements [10];
 
+// mpu data packet 
+float mpu_data [15];
+
 // delay time 
 int delay_time = 300;
 
@@ -37,6 +44,9 @@ bool is_sd_active = false;
 bool is_bmp_active = false;
 bool is_lm_active = false;
 bool is_radio_active = false;
+bool is_mpu_active = false;
+
+// INSTANCES \\
 
 Radio radio(Pins::Radio::ChipSelect,
             Pins::Radio::DIO0,
@@ -54,6 +64,9 @@ File log_file;
 // creating servo object 
 Servo myservo;
 
+// mpu object 
+MPU6050 mpu6050(Wire)
+
 // port where LM35 temperature sensor is connected
 const int lm35_pin = A0;
 
@@ -67,6 +80,7 @@ float lm35_raw_to_temperature(int raw) {
 
 void setup() {
   SerialUSB.begin(115200);
+  Wire.begin();
   pinMode(led_pin, OUTPUT);
 
   if (is_lm_active) analogReadResolution(12);
@@ -74,6 +88,7 @@ void setup() {
   radio_start();
   bmp_start ();
   sd_start ();
+  mpu_start ();
   
   //servo_setup(); // uncoment the first comment to allow servo setup
 }
@@ -203,6 +218,20 @@ bool log_to_sd (int package_counter, float pressure, float temp, unsigned int se
 }
 
 // setup part 
+
+bool mpu_start () {
+  if (!mpu6050.begin()) {
+    SerialUSB.println("MMPU init failed");
+    is_mpu_active = false;
+    return false;
+  } else {
+    mpu6050.calcGyroOffsets(true);
+    SerialUSB.println("MPU init success!");
+    is_mpu_active = true;
+    return true;
+  }
+}
+
 bool sd_start () {
   if (!SD.begin()) {
     SerialUSB.println("SD card init failed");
@@ -242,11 +271,11 @@ bool radio_start () {
 
 // check if on the ground 
 bool check_is_on_ground () {
+  update_mpu_data();
   if (check_last_pressure() && check_last_temperature()) {
-    if (check_mpu_data()){
-      is_on_ground = true;
-      return true;
-    }
+    // checking mpu data
+    is_on_ground = true;
+    return true;
   }
   is_on_ground = false; 
   return false;
@@ -304,8 +333,31 @@ bool check_last_temperature () {
   return true; 
 }
 
-bool check_mpu_data () {
+bool update_mpu_data () {
+
+  mpu6050.update();
+  
+  mpu_data [0] = mpu6050.getTemp();
+  mpu_data [1] = mpu6050.getAccX();
+  mpu_data [2] = mpu6050.getAccX();
+  mpu_data [3] = mpu6050.getAccZ();
+  mpu_data [4] = mpu6050.getGyroX;
+  mpu_data [5] = mpu6050.getGyroY();
+  mpu_data [6] = mpu6050.getGyroZ();
+  mpu_data [7] = mpu6050.getAccAngleX();
+  mpu_data [8] = mpu6050.getAccAngleY();
+  mpu_data [9] = mpu6050.getGyroAngleX();
+  mpu_data [10] = mpu6050.getGyroAngleY();
+  mpu_data [11] = mpu6050.getGyroAngleZ();
+  mpu_data [12] = mpu6050.getAngleX();
+  mpu_data [13] = mpu6050.getAngleY();
+  mpu_data [14] = mpu6050.getAngleZ();
+  
   return true;
+}
+
+bool check_mpu_data () {
+  // checking mpu data -> does it is repeating (ground) or it still changing (flight)
 }
 
 // servo part 

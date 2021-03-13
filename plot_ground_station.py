@@ -149,8 +149,7 @@ def gen_any_charts (df):
     plt.savefig(f'{y_title.title()} over {x_title.title()}.png')
 
 structured_data = (getdata.load_data_from_sd_ground('xd.txt', 8))
-
-print(structured_data)
+structured_data_can = (getdata.load_data_from_sd_cansat('plot_can.txt', 4))
 
 v = calculate_velocity(structured_data[:, 0], structured_data[:, -1])
 

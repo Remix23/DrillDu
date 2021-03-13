@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from math import fabs
 
 rules = {
     'can' : [
@@ -19,14 +18,34 @@ rules = {
         (21, 6),
         (17, 4),
         (11, 2)
+    ],
+    'together' : [
+        (True, True),
+        (False, True),
+        (True, True),
+        (True, True),
+        (False, True),
+        (False, True),
+        (False, True)
     ]
 }
 
 def average (x, y):
     return (x + y) / 2
 
-def merge (log_can, log_ground, lines_of_data_can, lines_of_data_ground):
-    pass
+def merge (log_can, log_ground):
+
+    for j, line in enumerate(log_ground):
+
+        for i, value in enumerate(line):
+            if rules['together'][i][0] == True and j < len(log_can):
+
+                if i > 1:
+                    line[i] = average(value, log_can[j][i - 1])
+                else:
+                    line[i] = average(value, log_can[j][i])
+    
+    return log_ground
 
 def load_data_from_sd_cansat (filename, lines_of_data):
 
