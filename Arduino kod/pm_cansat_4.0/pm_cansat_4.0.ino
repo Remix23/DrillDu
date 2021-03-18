@@ -16,16 +16,25 @@ const int led_pin = 13;
 
 unsigned long int send_time;
 
-// servo setup
-int servo_pin = 9;
-int servo_check_pin = 3;
+// servo stand_up setup
+int stand_up_servo_pin = 9;
+int stand_up_servo_check_pin = 3;
 int stand_up_starting_position = 55;
 int stand_up_finish_position = 160; 
- 
+
+// servo 360 drill up / down 
+int servo_drill_pin = 10;
+int servo_drill_positions [] = {180, 90, 0};
+String position_texts [] = {"Full forward", "Stop", "Full backwards"};
+
+// esc brushless drill rotating system 
+int esc_pin = 11;
+
+
 //int button_pin = 2;
 int starting_pos = 55; 
 int finish_position = 160;
-int servo_pos = 60; 
+int servo_stand_up_pos = 60; 
 int delay_turn_off = 50; 
 
 bool is_drill_made = false; 
@@ -49,6 +58,18 @@ bool is_lm_active = false;
 bool is_radio_active = false;
 bool is_mpu_active = false;
 
+struct Packet {
+  int packet_id;
+  double temperature_bmp;
+  float temperature_lm;
+  double pressure;
+  unsigned long int sending_time;
+  float mpu_data [15];
+  float current [10];
+} packet;
+
+const int packet_size = sizeof (packet);
+
 // INSTANCES \\
 
 Radio radio(Pins::Radio::ChipSelect,
@@ -64,8 +85,11 @@ BMP280 bmp;
 // creting file object 
 File log_file;
 
-// creating servo object 
-Servo myservo;
+// creating servo objects 
+Servo servo_stand_up;
+Servo servo_up_down;
+
+Sevo ESC_drill;
 
 // mpu object 
 MPU6050 mpu6050(Wire)
@@ -93,7 +117,8 @@ void setup() {
   sd_start ();
   mpu_start ();
   
-  //servo_setup(); // uncoment the first comment to allow servo setup
+  // servo_stand_up_setup(); // uncoment the first comment to allow servo setup
+  // servo_up_down_setup(); // uncomment this line to init the 360 servo 
 }
 
 void loop() {
@@ -123,11 +148,9 @@ void loop() {
     last_pressure_measurements[counter % 10] = P;
     last_temperature_measurements[counter % 10] = T;
 
-    float temperature = T;
-
     if (is_lm_active) {
     // use lm35_raw_to_temperature function to calculate temperature
-      temperature = lm35_raw_to_temperature(analogRead(lm35_pin));
+      float temperature = lm35_raw_to_temperature(analogRead(lm35_pin));
     
       // print temperature on SerialUSB
       SerialUSB.print("Temperature lm: ");
@@ -141,14 +164,20 @@ void loop() {
         SerialUSB.print(T - temperature);
       }
       SerialUSB.println(" deg C");
+      packet.temperature_lm = temperature;
     }
     
     send_time = millis ();
-    
-    send_measurments_via_radio(counter, P, temperature, send_time);
+   
+    // update packet 
+    packet.packet_id = counter;
+    packet.temperature_bmp = T;
+    packet.pressure = P;
+    packet.sending_time = send_time; 
+    send_measurments_via_radio()
 
     if (is_sd_active) {
-      log_to_sd(counter, P, temperature, send_time);
+      log_to_sd();
     } else {
       sd_start ();
       delay (1);
@@ -188,11 +217,9 @@ void loop() {
   
   delay(delay_time);
 }
-bool send_measurments_via_radio (int package_counter, float pressure, float temp, unsigned int send_time) {
-
-  float packet[] = {(float)package_counter, pressure, temp, (float) send_time};
+bool send_measurments_via_radio () {
   
-  if (!radio.transmit((uint8_t *)(packet), sizeof packet)) {
+  if (!radio.transmit((uint8_t *)(&packet), packet_size)) {
     SerialUSB.println("Sending failed!");
     return false;
   } else {
@@ -201,7 +228,7 @@ bool send_measurments_via_radio (int package_counter, float pressure, float temp
   }
 }
 
-bool log_to_sd (int package_counter, float pressure, float temp, unsigned int send_time) {
+bool log_to_sd () {
   log_file = SD.open("log.txt", FILE_WRITE);
   if (log_file) {
     log_file.print("Package send time = ");
@@ -369,29 +396,37 @@ bool check_mpu_data () {
 }
 
 // servo part 
-bool servo_setup () {
+bool servo_stand_up_setup () {
 
-  delay (3000);
-  SerialUSB.println("Servo s");
+  delay (100);
+  SerialUSB.println("Servo stand up - setup!");
   //pinMode(button_pin, INPUT_PULLUP);
-  pinMode(servo_check_pin, OUTPUT);
-  digitalWrite(servo_check_pin, LOW);
-  myservo.attach(servo_pin);
+  pinMode(stand_up_servo_check_pin, OUTPUT);
+  digitalWrite(stand_up_servo_check_pin, LOW);
+  servo_stand_up.attach(stand_up_servo_pin);
   delay (delay_turn_off);
-  digitalWrite(servo_check_pin, HIGH);
+  digitalWrite(stand_up_servo_check_pin, HIGH);
   delay(delay_turn_off);
-  myservo.write(servo_pos);
+  servo_stand_up.write(servo_stand_up_pos);
   delay (delay_turn_off);
-  digitalWrite(servo_check_pin, LOW);
+  digitalWrite(stand_up_servo_check_pin, LOW);
 
   return true; 
 }
 
+bool servo_up_down_setup () {
+  delay(100);
+  servo_up_down.attach(servo_drill_pin);
+  servo_up_down.write(servo_drill_positions[1]);
+  SerialUSB.println("Servo drill up, down - setup!");
+  return true;
+}
+
 bool stand_up (int number_of_tries, int delay_time) {
   for (int i = 1; i < number_of_tries; i++) {
-    servo_move (true, stand_up_starting_position, stand_up_finish_position);
+    servo_stand_up_move (true, stand_up_starting_position, stand_up_finish_position);
     delay (delay_time);
-    servo_move (false,);
+    servo_stand_up_move (false, stand_up_starting_position, stand_up_finish_position);
     delay (delay_time);
   }
   servo_move(true);
@@ -399,7 +434,7 @@ bool stand_up (int number_of_tries, int delay_time) {
   return true; 
 }
 
-bool servo_move (bool move_direction, int start_position, int finish_position) {
+bool servo_stand_up_move (bool move_direction, int start_position, int finish_position) {
   //SerialUSB.println("Waiting fot button...");
   //while (digitalRead(button_pin) != 0 ) {
     //delay (1);
@@ -413,23 +448,23 @@ bool servo_move (bool move_direction, int start_position, int finish_position) {
   // if move direction is True the servo will open the legs
   if (move_direction) {
 
-    digitalWrite(servo_check_pin, HIGH);
+    digitalWrite(stand_up_servo_check_pin, HIGH);
     delay (delay_turn_off);
-    myservo.write(start_position);
+    servo_stand_up.write(start_position);
     delay (delay_turn_off);
-    digitalWrite(servo_check_pin, LOW);
+    digitalWrite(stand_up_servo_check_pin, LOW);
   
     for (int i = starting_pos + 1; i <= finish_position; i++) {
     
-      servo_pos = i;
-      digitalWrite(servo_check_pin, HIGH);
+      servo_stand_up_pos = i;
+      digitalWrite(stand_up_servo_check_pin, HIGH);
       delay (delay_turn_off);
-      myservo.write(servo_pos);
+      servo_stand_up.write(servo_stand_up_pos);
       delay (delay_turn_off);
-      digitalWrite(servo_check_pin, LOW);
+      digitalWrite(stand_up_servo_check_pin, LOW);
   
       SerialUSB.print("Servo position: ");
-      SerialUSB.println(servo_pos);
+      SerialUSB.println(servo_stand_up_pos);
       SerialUSB.print("Direction: ");
       SerialUSB.println("closing");
   
@@ -437,23 +472,23 @@ bool servo_move (bool move_direction, int start_position, int finish_position) {
     }
   } else {
     
-    digitalWrite(servo_check_pin, HIGH);
+    digitalWrite(stand_up_servo_check_pin, HIGH);
     delay (delay_turn_off);
-    myservo.write(finish_position);
+    servo_stand_up.write(finish_position);
     delay (delay_turn_off);
-    digitalWrite(servo_check_pin, LOW);
+    digitalWrite(stand_up_servo_check_pin, LOW);
     
     for (int i = finish_position - 1; i >= start_position; i--) {
     
-      servo_pos = i;
-      digitalWrite(servo_check_pin, HIGH);
+      servo_stand_up_pos = i;
+      digitalWrite(stand_up_servo_check_pin, HIGH);
       delay (delay_turn_off);
-      myservo.write(servo_pos);
+      servo_stand_up.write(servo_stand_up_pos);
       delay (delay_turn_off);
-      digitalWrite(servo_check_pin, LOW);
+      digitalWrite(stand_up_servo_check_pin, LOW);
   
       SerialUSB.print("Servo position: ");
-      SerialUSB.println(servo_pos);
+      SerialUSB.println(servo_stand_up_pos);
       SerialUSB.print("Direction: ");
       SerialUSB.println("closing");
       
@@ -461,6 +496,13 @@ bool servo_move (bool move_direction, int start_position, int finish_position) {
     }
   }
   return true; 
+}
+
+bool servo_drill_move (int mode) {
+  delay(10);
+  servo_up_down.write(servo_drill_positions[mode]);
+  delay(10);
+  return true;
 }
 
 // update delay time 
@@ -483,14 +525,39 @@ int change_delay (int current_delay) {
 }
 
 // drilling 
-bool drill_move (bool move_direction) {
+
+bool drill_motor_setup () {
+  delay(100);
+  ESC_drill.attach(esc_pin, 1000, 2000);
+  ESC_drill.write(servo_drill_positions[1]);
+  SerialUSB.println("[SETUP] Brushless motor drill - setup success!");
   return true;
 }
 
-bool fan_start_stop (bool mode) {
+bool drill_rotate (bool move_direction) { // brushless motor controlled by esc 
+  return true;
+}
+
+bool fan_start_stop (bool mode) { // spark motor controlled by ESC
   if (mode) {
     return true;
   } else {
     return false;
+  }
+}
+
+void print_debug (int type, char *message, bool debug) {
+  String a = "";
+  swich (type) {
+    case 0:
+      a = "[SETUP] ";
+      break;
+    case 1:
+      a = "[ERROR] ";
+      break;
+  }
+  if (debug) {
+    SerialUSB.print(a);
+    SerialUSB.print(message);
   }
 }
