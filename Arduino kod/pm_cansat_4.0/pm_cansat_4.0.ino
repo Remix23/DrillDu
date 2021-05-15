@@ -30,6 +30,8 @@ String position_texts [] = {"Full forward", "Stop", "Full backwards"};
 // esc brushless drill rotating system 
 int esc_pin = 11;
 
+// esc fan motor (spark)
+int fan_motor_pin = 12;
 
 //int button_pin = 2;
 int starting_pos = 55; 
@@ -89,10 +91,11 @@ File log_file;
 Servo servo_stand_up;
 Servo servo_up_down;
 
-Sevo ESC_drill;
+Servo ESC_drill;
+Servo ESC_fan;
 
 // mpu object 
-MPU6050 mpu6050(Wire)
+MPU6050 mpu6050(Wire);
 
 // port where LM35 temperature sensor is connected
 const int lm35_pin = A0;
@@ -174,7 +177,7 @@ void loop() {
     packet.temperature_bmp = T;
     packet.pressure = P;
     packet.sending_time = send_time; 
-    send_measurments_via_radio()
+    send_measurments_via_radio();
 
     if (is_sd_active) {
       log_to_sd();
@@ -187,7 +190,7 @@ void loop() {
     
   } else {
     if (!is_radio_active) {
-      radio_start ();
+      radio_start();
       delay (1);
     }
     if (!is_bmp_active) {
@@ -232,14 +235,14 @@ bool log_to_sd () {
   log_file = SD.open("log.txt", FILE_WRITE);
   if (log_file) {
     log_file.print("Package send time = ");
-    log_file.println(send_time);
+    log_file.println(packet.sending_time);
     log_file.print("Package #");
-    log_file.println(package_counter);   
+    log_file.println(packet.packet_id);   
     log_file.print("Temperature cansat = ");
-    log_file.print(temp);
+    log_file.print(packet.temperature_bmp);
     log_file.println(" deg C");
     log_file.print("Presure cansat = ");
-    log_file.print(pressure);
+    log_file.print(packet.pressure);
     log_file.println(" hPa");    
     log_file.close();
     SerialUSB.println("Data saved");
@@ -253,16 +256,11 @@ bool log_to_sd () {
 // setup part 
 
 bool mpu_start () {
-  if (!mpu6050.begin()) {
-    SerialUSB.println("MMPU init failed");
-    is_mpu_active = false;
-    return false;
-  } else {
-    mpu6050.calcGyroOffsets(true);
-    SerialUSB.println("MPU init success!");
-    is_mpu_active = true;
-    return true;
-  }
+  mpu6050.begin();
+  mpu6050.calcGyroOffsets(true);
+  SerialUSB.println("MPU init success!");
+  is_mpu_active = true;
+  return true;
 }
 
 bool sd_start () {
@@ -374,7 +372,7 @@ bool update_mpu_data () {
   mpu_data [1] = mpu6050.getAccX();
   mpu_data [2] = mpu6050.getAccX();
   mpu_data [3] = mpu6050.getAccZ();
-  mpu_data [4] = mpu6050.getGyroX;
+  mpu_data [4] = mpu6050.getGyroX();
   mpu_data [5] = mpu6050.getGyroY();
   mpu_data [6] = mpu6050.getGyroZ();
   mpu_data [7] = mpu6050.getAccAngleX();
@@ -429,7 +427,7 @@ bool stand_up (int number_of_tries, int delay_time) {
     servo_stand_up_move (false, stand_up_starting_position, stand_up_finish_position);
     delay (delay_time);
   }
-  servo_move(true);
+  servo_stand_up_move(true, 55, 160);
 
   return true; 
 }
@@ -439,8 +437,6 @@ bool servo_stand_up_move (bool move_direction, int start_position, int finish_po
   //while (digitalRead(button_pin) != 0 ) {
     //delay (1);
   //}
-  int start_position = 55; 
-  int finish_position = 160;
   delay (1);
 
   SerialUSB.println("Starting servo rotation");
@@ -534,21 +530,41 @@ bool drill_motor_setup () {
   return true;
 }
 
-bool drill_rotate (bool move_direction) { // brushless motor controlled by esc 
+bool fan_motor_setup() {
+  delay(10);
+  ESC_fan.attach(fan_motor_pin, 1000, 2000);
+  ESC_fan.write(servo_drill_positions[1]);
+  SerialUSB.println("[SETUP] Fan motor - setup success!");
   return true;
 }
 
-bool fan_start_stop (bool mode) { // spark motor controlled by ESC
-  if (mode) {
-    return true;
-  } else {
-    return false;
+bool drill_rotate (int stops, int time, int finish_position) { // brushless motor controlled by ESC mode == true -> speed increasing | mode == false -> speed decreasing
+  int rotation_speed = 0;
+  float x = finish_position / stops;
+  int delay_time = time / stops;
+  for (int i = 1; i <= stops; i++) {
+    rotation_speed = x * i;
+    ESC_drill.write(rotation_speed);
+    delay(delay_time);
   }
+  return true;
+}
+
+bool fan_start_stop (int stops, int time) { // spark motor controlled by ESC mode == true -> speed increasing | mode == false -> speed decreasing
+  int fan_speed = 0; 
+  float x = 180 / stops;
+  int delay_time = time / stops;
+  for (int i = 1; i <= stops; i++) {
+    fan_speed = x * i;
+    ESC_fan.write(fan_speed);
+    delay(delay_time);
+  }
+  return true;
 }
 
 void print_debug (int type, char *message, bool debug) {
   String a = "";
-  swich (type) {
+  switch (type) {
     case 0:
       a = "[SETUP] ";
       break;
@@ -560,4 +576,16 @@ void print_debug (int type, char *message, bool debug) {
     SerialUSB.print(a);
     SerialUSB.print(message);
   }
+}
+
+bool make_drill () {
+  servo_drill_move(1);
+  delay(10);
+  servo_drill_move(0);
+  
+  drill_rotate(3, 500, 120);
+
+  fan_start_stop(5, 1000);
+
+  return true;
 }
